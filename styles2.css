@@ -1,0 +1,127 @@
+/* styles.css */
+/* universal selector - selects elements of any type : *{}   */
+/* <div> - selects all divs : div {}*/
+/* . - reference a defined class <div class =""> : .classname {} */
+/* # - reference a defined id <div id = ""> : #idname{}*/
+/*DIFFERENCE: An element can only have ONE ID. An ID cannot be repeated on a single page
+the ID should not contain any white space*/
+/* group selecting: 
+    .read, 
+    .unread{}
+    .read{}
+    .unread{} 
+    */ 
+/* chaining selectors - 
+<div class = "subsection header"> <- this has TWO classes; subsection, and a child class header
+<div class = "subsection preview">
+.subsection{} is how you target all subsection classes
+.subsection.header{} is how you target that specific class
+
+<div class="subsection header">
+<div class="subsection" id="preview">
+.subsection#preview{} is valid
+
+PROPERTIES
+- color: #1100ff;
+- color: rgb(100, 0, 127);
+- color: hsl(15, 85%, 56%);
+- font-family: "Times New Roman", sans-serif;
+- font size: 22px
+- font-weight: bold
+- text-align: center
+- height: auto;
+- width: 500px;
+
+
+CASCADE CSS
+- An ID Selector will always beat class selectors
+- A class selector will always beat type selectors
+- A type selector will always beat anything less specifc
+- A larger amount of a selector will beat a smaller amount of that selector
+
+.main.list is more specific/uses more class selectors than .subsection
+.main.list is a class selector, #subsection is a ID selector, so #subsection wins out
+
+#subsection .list{}
+#subsection .main.list{}
+- Both rules use ID and class selectors, but #subsection .main.list has more class selectors
+- so it wins out
+Everything wins against *, the universal selector, because universal selector has no specificity
+-------------------------------------------
+<div id="parent">
+  <div class="child">
+
+#parent{color : red}
+.child{color : blue}
+
+- parent/red has higher specificity but color blue would win since red is inherited
+-----------------------------------------------
+Final factor:
+which ever rule is defined LAST is the winner.
+
+.alert {color : red}
+.warning {color : blue}
+
+warning is last, so it applies
+
+*/
+
+div {
+  color: purple;
+  background-color: black;
+}
+
+p {
+  color: red;
+}
+.odd {
+  background-color: rgb(255, 167, 167);
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.oddly-cool {
+  font-size: 24px;
+}
+
+#two {
+  color: #0000ff;
+  font-size: 36px;
+}
+
+#four {
+  background-color: hsl(120, 100%, 75%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.inverted,
+.fancy {
+  font-family: Helvetica, "Times New Roman", sans-serif;
+  font-size: 28px;
+}
+
+.inverted {
+  background-color: black;
+  color: white;
+}
+
+.fancy {
+  background-color: yellow;
+}
+
+.original.proportioned {
+  height: auto;
+  width: 300px;
+}
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}

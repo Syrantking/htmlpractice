@@ -1,0 +1,77 @@
+/* styles.css */
+/* universal selector - selects elements of any type : *{}   */
+/* <div> - selects all divs : div {}*/
+/* . - reference a defined class <div class =""> : .classname {} */
+/* # - reference a defined id <div id = ""> : #idname{}*/
+/*DIFFERENCE: An element can only have ONE ID. An ID cannot be repeated on a single page
+the ID should not contain any white space*/
+/* group selecting: 
+    .read, 
+    .unread{}
+    .read{}
+    .unread{} 
+    */ 
+/* chaining selectors - 
+<div class = "subsection header"> <- this has TWO classes; subsection, and a child class header
+<div class = "subsection preview">
+.subsection{} is how you target all subsection classes
+.subsection.header{} is how you target that specific class
+
+<div class="subsection header">
+<div class="subsection" id="preview">
+.subsection#preview {} is valid
+
+*/
+/*
+- padding increases the space between the edge of a box and content inside of it 
+- margin increases the space between a box and any others that sit next to it
+- border adds space (even if its only a pixel or two) between the margin 
+
+*/
+/*
+- default style is display: block
+- inline elements do not start on a new line
+- they appear in line with whatever elements they are placed besides
+- you generally do not want to put exta padding or margins on inline elements
+- inline-block behave line inline elements, but with block style margins and padding
+-
+
+*/
+
+
+* {
+  /*border: 1px solid cyan;
+  padding: 5px;
+  margin: 10px;
+  */
+  background-color: antiquewhite;
+
+}
+
+#page {
+  background-color: greenyellow;
+}
+
+#sonic {
+  background-color: blue;
+  border: 4px solid black
+  /*background-color: black;*/
+}
+
+#mario {
+  background-color: red;
+  border: 4px solid black
+  /*background-color: black;*/
+}
+
+.flex-container {
+  /*display:flex;*/
+}
+
+.flex-container div {
+  background: peachpuff;
+  border: 4px solid green;
+  height: 100px;
+}
+
+
